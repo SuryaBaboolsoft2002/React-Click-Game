@@ -1,0 +1,95 @@
+/* Home.css */
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI';
+}
+
+.home-container {
+    
+    animation-delay: 0s;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.help-container {
+    
+    animation-delay: 0s;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.top-score-container {
+    
+    animation-delay: 0s;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-container h1 {
+    
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.home-container p {
+    animation-delay: 0.5s;
+  font-size: 18px;
+  color: #d6d6d6;
+  max-width: 400px;
+}
+
+button {
+    animation-delay: 1s;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-size: 18px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  
+  border-color: white;
+  border-width: 1px;
+  cursor: pointer;
+}
+.button-group {
+    animation-delay: 1s;
+  display: flex;
+  gap: 10px; /* space between buttons */
+  justify-content: center; /* center horizontally */
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: black;
+  box-shadow: 5px 5px 5px rgb(220, 220, 220);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

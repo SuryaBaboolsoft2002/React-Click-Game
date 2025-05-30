@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  overflow: hidden;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  height: 90vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Fixed Header */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
+  background-color: black;
+  z-index: 1000;
+}
+
+/* Fixed Footer */
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  background-color: black;
+  z-index: 1000;
+}
+
+/* Username box */
+.username-box {
+  border: 2px solid white;
+  padding: 8px 12px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Main content centered between header and footer */
+.main-content {
+  flex: 1;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding-top: 80px;     /* space for fixed header */
+  padding-bottom: 60px;  /* space for fixed footer */
+  height: 100vh;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Centered container for the home page */
+.home-container {
+  text-align: center;
 }
