@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <HashRouter>
       <div className="app">
         <header className="app-header">
           {username && <div className="username-box">{username}</div>}
@@ -39,7 +39,7 @@ function App() {
 
         <footer className="app-footer">⚖️ Weight Match Game</footer>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
