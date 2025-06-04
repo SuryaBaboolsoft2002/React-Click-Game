@@ -2,6 +2,8 @@
   "name": "weight-match-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://suryababoolsoft2002.github.io/React-Click-Game"
+
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -12,8 +14,7 @@
     "react-router-dom": "^7.6.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "homepage": "https://suryababoolsoft2002.github.io/React-Click-Game"
-
+    
 
   },
   "scripts": {
