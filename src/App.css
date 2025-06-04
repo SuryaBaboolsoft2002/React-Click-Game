@@ -1,68 +1,205 @@
-/* App.css */
-
-body {
-  margin: 0;
-  background-color: black;
-  color: white;
-  font-family: sans-serif;
-  overflow: hidden;
-  height: 100vh;
-}
-
-.app {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Fixed Header */
-.app-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 98%;
-  padding: 20px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: black;
-  z-index: 1000;
-}
-
-/* Fixed Footer */
-.app-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
+.App {
   text-align: center;
-  font-size: 14px;
-  background-color: black;
-  z-index: 1000;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-family: "Arial", sans-serif;
 }
 
-/* Username box */
-.username-box {
-  border: 2px solid white;
-  padding: 8px 12px;
-  font-weight: bold;
-  border-radius: 8px;
-}
-
-/* Main content centered between header and footer */
-.main-content {
-  flex: 1;
+.navbar {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 80px;     /* space for fixed header */
-  padding-bottom: 60px;  /* space for fixed footer */
-  height: 100vh;
-  box-sizing: border-box;
+  gap: 2rem;
 }
 
-/* Centered container for the home page */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main-content {
+  padding: 2rem;
+}
+
 .home-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+.home-content h2 {
+  margin-bottom: 1rem;
+}
+
+.home-content ul {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+}
+
+.home-content li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.play-link {
+  text-decoration: none;
+}
+
+.game-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.game-area {
+  margin: 3rem 0;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-btn,
+.click-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.start-btn {
+  background: linear-gradient(45deg, #4caf50, #45a049);
+  color: white;
+}
+
+.start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.click-btn {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+  font-size: 1.5rem;
+  padding: 2rem 3rem;
+  animation: pulse 1s infinite;
+}
+
+.click-btn:hover {
+  transform: scale(1.05);
+}
+
+.click-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+  }
+}
+
+.game-over {
   text-align: center;
+}
+
+.game-over h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.new-record {
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.controls {
+  margin-top: 2rem;
+}
+
+.reset-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .game-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .click-btn {
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+  }
 }
